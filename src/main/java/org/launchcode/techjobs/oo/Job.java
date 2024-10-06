@@ -1,6 +1,9 @@
 package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Stream;
+
 
 public class Job {
 
@@ -93,4 +96,30 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    private String handleEmptyField(String field) {
+        if (field.isBlank()) { return "Data not available";}
+        return field;
+    }
+
+    @Override
+    public String toString() {
+        String newline = System.lineSeparator();
+
+        if (getEmployer() == null) {
+            return "OOPS! This job does not seem to exist.";
+        }
+
+        return newline +
+                "ID: " + handleEmptyField(String.valueOf(id)) + newline +
+                "Name: " + handleEmptyField(getName()) + newline +
+                "Employer: " + handleEmptyField(getEmployer().getValue()) + newline +
+                "Location: " + handleEmptyField(getLocation().getValue()) + newline +
+                "Position Type: " + handleEmptyField(getPositionType().getValue()) + newline +
+                "Core Competency: " + handleEmptyField(getCoreCompetency().getValue()) +
+                newline;
+
+    }
+
+
 }
