@@ -14,7 +14,7 @@ public class Employer {
     }
 
     public Employer(String value) {
-        this();
+        this(); //WHY - initializes the first constructor as the default behavior.
         this.value = value;
     }
 
