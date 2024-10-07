@@ -2,8 +2,6 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-
-
 public class Job {
 
     private int id;
