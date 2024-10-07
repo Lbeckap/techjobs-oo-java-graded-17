@@ -1,8 +1,7 @@
 package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Stream;
+
 
 
 public class Job {
@@ -120,6 +119,4 @@ public class Job {
                 newline;
 
     }
-
-
 }
