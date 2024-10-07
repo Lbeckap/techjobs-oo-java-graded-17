@@ -54,8 +54,8 @@ public class JobTest {
     public void testToStringStartsAndEndsWithNewLine() {
         String newline = System.lineSeparator();
         String expected = newline + "someString" + newline;
-        String first = String.valueOf(expected.charAt(0)) + String.valueOf(expected.charAt(1));
-        String last = String.valueOf(expected.charAt(expected.length() - 2) + String.valueOf(expected.charAt(expected.length() - 1)));
+        String first = String.valueOf(expected.charAt(0));
+        String last = String.valueOf(expected.charAt(expected.length() - 1));
 
         assertEquals(newline, first);
         assertEquals(newline, last);
